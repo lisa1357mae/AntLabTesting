@@ -13,11 +13,12 @@ class Home extends React.Component {
    };
 render() {
  return (
-   <ScreenContainer style = {{flex: 1, backgroundColor: 'pink'}}>
+   <ScreenContainer style = {{flex: 1, backgroundColor: 'black'}}>
 
 
-    <View style={{ justifyContent: 'center' }}>
+    <View style={{ right: 15, top: 30 }}>
     <Deck
+
       data={[
         { file:'https://i.pinimg.com/originals/56/c9/8a/56c98a363ab953d24d36d247c0b1d9a7.jpg'},
         { file:'https://imgnooz.com/sites/default/files/wallpaper/nature/60890/beautiful-sky-white-flower-wallpapers-60890-9393731.jpg'},
