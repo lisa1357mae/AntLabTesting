@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, View, Text } from 'react-native';
+import Quote from 'react-native-quote-generator';
 import {
 
   ScreenContainer,
@@ -17,6 +18,7 @@ class Profile extends React.Component {
       <ScreenContainer style={{ flex: 1, backgroundColor: 'lightblue' }}>
         <View>
           <Text style={{ fontSize: 18, color: 'grey' }}> Profile Screen</Text>
+          <Quote />
         </View>
         <View style={{ top: 100 }}>
           <Button
