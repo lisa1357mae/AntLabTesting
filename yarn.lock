@@ -5381,7 +5381,7 @@ react-native-safe-area-view@^0.14.1:
 
 "react-native-swiper-deck@file:../../Anthroware/react-native-swiper-deck/react-native-swiper-deck-v1.0.1-rc4.tgz":
   version "1.0.1-rc4"
-  resolved "file:../../Anthroware/react-native-swiper-deck/react-native-swiper-deck-v1.0.1-rc4.tgz#b9c0dda1b0e711fd93d7bac94b4d23acbd4b5df2"
+  resolved "file:../../Anthroware/react-native-swiper-deck/react-native-swiper-deck-v1.0.1-rc4.tgz#94c48385f24f52012f2297bcf7441abed9e4ac32"
 
 react-native-tab-view@^1.2.0, react-native-tab-view@^1.4.1:
   version "1.4.1"

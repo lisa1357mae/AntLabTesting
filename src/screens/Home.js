@@ -25,7 +25,7 @@ class Home extends React.Component {
             { file: 'https://afktravel.com/wp-content/uploads/2014/08/namaqua-flowers-2.jpg' },
           ]}
           swipeOrientation="horiz"
-          imageStyle={{ height: 180 }}
+          imageStyle={{ height: 190, width: 105 }}
           deckStyle={{ width: 50, left: 150, top: 150 }}
           textStyle={{
             color: 'purple',
