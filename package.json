@@ -8,11 +8,11 @@
   },
   "dependencies": {
     "babel-eslint": "^10.0.1",
-    "react": "16.8.3",
-    "react-native": "0.59.4",
+    "react": "16.8.6",
+    "react-native": "0.60.5",
     "react-native-gesture-handler": "^1.1.0",
-    "react-native-quote-generator": "../../react-native-quote-generator/react-native-quote-generator-v0.1.0-rc1.tgz",
-    "react-native-swiper-deck": "/Users/lisamae/Development/Anthroware/react-native-swiper-deck/react-native-swiper-deck-v1.0.1-rc4.tgz",
+    "react-native-quote-generator": "/Users/lisamae/Development/react-native-quote-generator/react-native-quote-generator-v0.1.0-rc2.tgz",
+    "react-native-swiper-deck": "/Users/lisamae/Development/Anthroware/react-native-swiper-deck/react-native-swiper-deck-v1.0.2-rc4.tgz",
     "react-navigation": "^3.7.1"
   },
   "devDependencies": {

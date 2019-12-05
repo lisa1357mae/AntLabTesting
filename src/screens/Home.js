@@ -25,11 +25,11 @@ class Home extends React.Component {
             { file: 'https://afktravel.com/wp-content/uploads/2014/08/namaqua-flowers-2.jpg' },
           ]}
           swipeOrientation="horiz"
-          imageStyle={{ height: 190, width: 105 }}
+          imageStyle={{ height: 195, width: 190 }}
           deckStyle={{ width: 50, left: 150, top: 150 }}
           textStyle={{
-            color: 'purple',
-            backgroundColor: 'yellow',
+          //  color: 'purple',
+          //  backgroundColor: 'yellow',
             fontSize: 12,
             left: 50,
             top: 40,
