@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TextInput, View, Text } from 'react-native';
+import {TextInput, View, Text} from 'react-native';
 
 const styles = {
   inputStyle: {
@@ -24,11 +24,8 @@ const styles = {
   },
 };
 
-const Input = ({
-  label, value, onChangeText,
-  placeholder,
-}) => {
-  const { inputStyle, labelStyle, containerStyle } = styles;
+const Input = ({label, value, onChangeText, placeholder}) => {
+  const {inputStyle, labelStyle, containerStyle} = styles;
   return (
     <View style={containerStyle}>
       <Text style={labelStyle}>{label}</Text>
@@ -56,4 +53,4 @@ Input.defaultProps = {
   placeholder: '',
 };
 
-export { Input };
+export {Input};

@@ -1,3 +1,4 @@
 export * from './ScreenContainer';
-export * from './CustomButton';
+export * from './SmallCustomButton';
 export * from './input';
+export * from './DisplayModal';
