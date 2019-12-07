@@ -1,11 +1,20 @@
 import React from 'react';
 import Deck from 'react-native-swiper-deck';
-import { Button, View, StyleSheet } from 'react-native';
-
+import {View, StyleSheet} from 'react-native';
+import {SmallCustomButton} from '../components/common';
 
 const styles = StyleSheet.create({
-  cardStyle: {
+  cardStyle: {},
 
+  homeButtonStyle: {
+    backgroundColor: 'lightblue',
+    paddingRight: 10,
+    paddingLeft: 10,
+  },
+  homeButtonTextStyle: {
+    color: 'black',
+    fontSize: 8,
+    fontWeight: 'bold',
   },
 });
 
@@ -35,11 +44,13 @@ class Home extends React.Component {
             top: 40,
           }}
         />
-        <View style={{ flex: 1, width: 120, left: 200 }}>
-          <Button
-            title="Go to Next"
-            onPress={() => this.props.navigation.navigate('Profile')}
-          />
+      <View style={{ left: 250, bottom: 20}}>
+          <SmallCustomButton
+            textStyles={styles.homeButtonTextStyle}
+            buttonStyles={styles.homeButtonStyle}
+            onPress={() => this.props.navigation.navigate('Profile')}>
+            Next
+          </SmallCustomButton>
         </View>
       </View>
     );

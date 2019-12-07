@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
   },
   customTextStyle: {
     color: 'black',
+    fontWeight: 'bold',
   },
   container: {
     flex: 1,
@@ -107,7 +108,7 @@ class Profile extends React.Component {
 
 
   static navigationOptions = {
-    title: 'Home',
+    title: 'Profile',
   };
 
   render() {
