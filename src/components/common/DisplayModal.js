@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Modal, StyleSheet, Text} from 'react-native';
+import {View, Modal, StyleSheet, Text, Image} from 'react-native';
 import {SmallCustomButton} from '.';
 
 const styles = StyleSheet.create({
@@ -17,14 +17,13 @@ const styles = StyleSheet.create({
   modalContainer: {
     flex: 1,
     justifyContent: 'space-between',
-  //  backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    backgroundColor: 'yellow',
+    backgroundColor: '#f6e7ce',
     marginTop: 100,
     marginBottom: 100,
   },
   modalContainerTextStyle: {
     fontSize: 18,
-    color: 'green',
+    color: 'black',
     fontWeight: 'bold',
     justifyContent: 'center',
     alignItems: 'center',
@@ -49,7 +48,7 @@ const styles = StyleSheet.create({
     paddingBottom: 4,
   },
   primaryButtonStyle: {
-    backgroundColor: 'green',
+    backgroundColor: '#b44346',
   },
 
   primaryButtonTextStyle: {
@@ -57,20 +56,30 @@ const styles = StyleSheet.create({
     paddingLeft: 40,
     paddingTop: 4,
     paddingBottom: 4,
-    color: 'red',
+    color: 'black',
   },
 
   secondaryButtonStyle: {
-    backgroundColor: 'orange',
+    backgroundColor: '#d88e6c',
   },
   secondaryButtonTextStyle: {
-    color: 'magenta',
+    color: 'black',
     paddingRight: 45,
     paddingLeft: 45,
     paddingTop: 4,
     paddingBottom: 4,
   },
+  logostyle: {
+    height: 50,
+    width: 55,
+    marginLeft: 124,
+  },
+  imageView: {
+    marginTop: 10,
+  },
 });
+
+const logo = require('../../images/anthrowarelogo.png');
 
 const ModalButton = ({text, onPress, isPrimary}) => (
   <View style={styles.buttonView}>
@@ -97,6 +106,9 @@ export const DisplayModal = ({visibility, setVisibility, buttons}) => (
       visible={visibility}
       onRequestClose={() => {}}>
       <View style={styles.modalContainer}>
+        <View style={styles.imageView}>
+          <Image style={styles.logostyle} source={logo} />
+        </View>
         <Text style={styles.modalContainerTextStyle}>Custom Modal</Text>
         <View style={[styles.innerContainer]}>
           {buttons.map(({text, onPress, isPrimary}) => (

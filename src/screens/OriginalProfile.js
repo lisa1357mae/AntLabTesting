@@ -1,8 +1,6 @@
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
-import Quote from 'react-native-quote-generator';
-import {DisplayModal} from '../components/common';
-
+import {View, Text, StyleSheet, Modal, TouchableOpacity} from 'react-native';
+import {SmallCustomButton} from '../components/common';
 const styles = StyleSheet.create({
   containerStyle: {
     flex: 1,
@@ -27,7 +25,6 @@ const styles = StyleSheet.create({
   },
   customTextStyle: {
     color: 'black',
-    fontWeight: 'bold',
   },
   container: {
     flex: 1,
@@ -67,7 +64,7 @@ const styles = StyleSheet.create({
     color: 'red',
   },
   secondaryButtonStyle: {
-    backgroundColor: 'green',
+    backgroundColor: 'white',
     paddingRight: 90,
     paddingLeft: 90,
   },
@@ -78,7 +75,7 @@ const styles = StyleSheet.create({
     paddingTop: 4,
     paddingBottom: 4,
   },
-  containerWrapperStyle: {
+  containerWrapper: {
     flex: 1,
   },
 });
@@ -90,11 +87,12 @@ class Profile extends React.Component {
       modalVisible: false,
     };
   }
-  setModalVisible = visible => {
+  setModalVisible(visible) {
     this.setState({modalVisible: visible});
-  };
+  }
+
   static navigationOptions = {
-    title: 'Profile',
+    title: 'Home',
   };
 
   render() {
@@ -104,32 +102,63 @@ class Profile extends React.Component {
       nameTextStyle,
       logoutTabStyle,
       customTextStyle,
+      container,
+      modalContainer,
+      innerContainer,
+      buttonView,
+      primaryButtonStyle,
+      primaryButtonTextStyle,
+      secondaryButtonStyle,
+      secondaryButtonTextStyle,
     } = styles;
 
+    const modalBackgroundStyle = {
+      backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    };
+    const innerContainerTransparentStyle = {padding: 25};
+
     return (
-      <View style={styles.containerWrapperStyle}>
+      <View style={styles.containerWrapper}>
         <View style={middleContent}>
           <View style={nameViewStyle}>
-            <Text style={nameTextStyle}>Profile Screen</Text>
-            <Quote />
+            <Text style={nameTextStyle}>Settings</Text>
           </View>
-          <DisplayModal
-            visibility={this.state.modalVisible}
-            setVisibility={this.setModalVisible}
-            buttons={[
-              {
-                text: 'Log Out',
-                onPress: () => {
-                  this.props.navigation.navigate('Home');
-                },
-                isPrimary: true,
-              },
-              {
-                text: 'Cancel',
-                onPress: () => {},
-              },
-            ]}
-          />
+
+          <View style={[container, modalBackgroundStyle]}>
+            <Modal
+              animationType="fade"
+              transparent
+              visible={this.state.modalVisible}
+              onRequestClose={() => {}}>
+              <View style={modalContainer}>
+                <View style={[innerContainer, innerContainerTransparentStyle]}>
+                  <View style={buttonView}>
+                    <SmallCustomButton
+                      buttonStyles={primaryButtonStyle}
+                      textStyles={primaryButtonTextStyle}
+                      onPress={() => {
+                        this.setModalVisible(!this.state.modalVisible);
+                        this.props.navigation.navigate('login');
+                        this.props.logoutUser();
+                      }}>
+                      Log Out
+                    </SmallCustomButton>
+                  </View>
+                  <View style={buttonView}>
+                    <SmallCustomButton
+                      buttonStyles={secondaryButtonStyle}
+                      textStyles={secondaryButtonTextStyle}
+                      onPress={() => {
+                        this.setModalVisible(!this.state.modalVisible);
+                      }}>
+                      Cancel
+                    </SmallCustomButton>
+                  </View>
+                </View>
+              </View>
+            </Modal>
+          </View>
+
           <View style={logoutTabStyle}>
             <TouchableOpacity
               onPress={() => {
