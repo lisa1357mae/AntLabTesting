@@ -8,7 +8,7 @@ in your terminal after cloning (assuming you have a mobile environment set up al
 
 If not, follow the directions here: https://facebook.github.io/react-native/docs/getting-started
 
-Use NVM 8.10.0
+Use Node Version 8.10.0
 
 
 Note for our Developers: Packages can easily be added and removed and should always be removed after testing is complete.
