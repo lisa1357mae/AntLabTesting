@@ -49,11 +49,13 @@ const styles = StyleSheet.create({
   },
   primaryButtonStyle: {
     backgroundColor: '#b44346',
+    paddingLeft: 24,
+    paddingRight: 24,
   },
 
   primaryButtonTextStyle: {
-    paddingRight: 40,
-    paddingLeft: 40,
+    paddingRight: 50,
+    paddingLeft: 50,
     paddingTop: 4,
     paddingBottom: 4,
     color: 'black',
@@ -64,18 +66,19 @@ const styles = StyleSheet.create({
   },
   secondaryButtonTextStyle: {
     color: 'black',
-    paddingRight: 45,
-    paddingLeft: 45,
+    paddingRight: 46,
+    paddingLeft: 46,
     paddingTop: 4,
     paddingBottom: 4,
   },
   logostyle: {
     height: 50,
     width: 55,
-    marginLeft: 124,
   },
   imageView: {
     marginTop: 10,
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
 });
 
@@ -109,7 +112,9 @@ export const DisplayModal = ({visibility, setVisibility, buttons}) => (
         <View style={styles.imageView}>
           <Image style={styles.logostyle} source={logo} />
         </View>
-        <Text style={styles.modalContainerTextStyle}>Custom Modal</Text>
+        <View style={styles.texViewStyle}>
+          <Text style={styles.modalContainerTextStyle}>Custom Modal</Text>
+        </View>
         <View style={[styles.innerContainer]}>
           {buttons.map(({text, onPress, isPrimary}) => (
             <ModalButton
