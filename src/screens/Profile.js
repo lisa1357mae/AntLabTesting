@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
-import Quote from 'react-native-quote-generator';
+// import Quote from 'react-native-quote-generator';
 import {DisplayModal} from '../components/common';
 
 const styles = StyleSheet.create({
@@ -120,7 +120,6 @@ class Profile extends React.Component {
         <View style={middleContent}>
           <View style={nameViewStyle}>
             <Text style={nameTextStyle}>Profile Screen</Text>
-            <Quote />
           </View>
           <DisplayModal
             visibility={this.state.modalVisible}

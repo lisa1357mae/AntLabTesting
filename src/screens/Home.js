@@ -1,5 +1,5 @@
 import React from 'react';
-import Deck from 'react-native-swiper-deck';
+//import Deck from 'react-native-swiper-deck';
 import {View, StyleSheet} from 'react-native';
 import {SmallCustomButton} from '../components/common';
 
@@ -33,8 +33,8 @@ class Home extends React.Component {
   };
   render() {
     return (
-      <View style={{ height: 50, width: 50 }}>
-        <Deck
+      <View style={{marginLeft: 50, marginRight: 50, marginTop: 23}}>
+      {/*  <Deck
           data={[
             { file: 'https://i.pinimg.com/originals/56/c9/8a/56c98a363ab953d24d36d247c0b1d9a7.jpg' },
             { file: 'https://afktravel.com/wp-content/uploads/2014/08/namaqua-flowers-2.jpg' },
@@ -49,15 +49,13 @@ class Home extends React.Component {
             left: 50,
             top: 40,
           }}
-        />
-      <View style={{ left: 250, bottom: 20}}>
-          <SmallCustomButton
-            textStyles={styles.homeButtonTextStyle}
-            buttonStyles={styles.homeButtonStyle}
-            onPress={() => this.props.navigation.navigate('Profile')}>
-            Next
-          </SmallCustomButton>
-        </View>
+        /> */}
+        <SmallCustomButton
+          textStyles={styles.homeButtonTextStyle}
+          buttonStyles={styles.homeButtonStyle}
+          onPress={() => this.props.navigation.navigate('Profile')}>
+          Next
+        </SmallCustomButton>
       </View>
     );
   }
