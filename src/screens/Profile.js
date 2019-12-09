@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
   customTextStyle: {
     color: '#8BBABB',
     fontWeight: 'bold',
+    marginLeft: 8,
   },
   container: {
     flex: 1,
