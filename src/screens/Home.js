@@ -1,10 +1,10 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import {SmallCustomButton} from '../components/common';
+import {SmallCustomButton, ScreenContainer} from '../components/common';
 
 const styles = StyleSheet.create({
   homeButtonStyle: {
-    backgroundColor: '#b44346',
+    backgroundColor: '#6C7B95',
     paddingRight: 46,
     paddingLeft: 46,
     paddingTop: 14,
@@ -34,6 +34,7 @@ class Home extends React.Component {
   };
   render() {
     return (
+      <ScreenContainer style={{ backgroundColor:'#C7F0DB' }}>
       <View style={styles.containerStyle}>
         <SmallCustomButton
           textStyles={styles.homeButtonTextStyle}
@@ -41,7 +42,9 @@ class Home extends React.Component {
           onPress={() => this.props.navigation.navigate('Profile')}>
           Next Screen
         </SmallCustomButton>
+
       </View>
+        </ScreenContainer>
     );
   }
 }

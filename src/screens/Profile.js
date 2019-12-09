@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
   nameTextStyle: {
     fontSize: 28,
     fontWeight: 'bold',
+    color: '#464159',
   },
   logoutTabStyle: {
     borderBottomWidth: 1,
@@ -23,7 +24,7 @@ const styles = StyleSheet.create({
     paddingBottom: 24,
   },
   customTextStyle: {
-    color: '#b44346',
+    color: '#8BBABB',
     fontWeight: 'bold',
   },
   container: {
@@ -33,6 +34,7 @@ const styles = StyleSheet.create({
   },
   containerWrapperStyle: {
     flex: 1,
+    backgroundColor: '#6C7B95',
   },
 });
 

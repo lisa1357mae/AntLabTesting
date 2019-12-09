@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   modalContainer: {
     flex: 1,
     justifyContent: 'space-between',
-    backgroundColor: '#f6e7ce',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
     marginTop: 100,
     marginBottom: 100,
   },
@@ -25,10 +25,14 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: 'black',
     fontWeight: 'bold',
+    flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'center',
+  //  alignItems: 'center',
     marginTop: 25,
-    marginLeft: 92,
+  },
+  textViewStyle: {
+    justifyContent: 'center',
+    flexDirection: 'column',
   },
   modalBackgroundStyle: {
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -48,7 +52,7 @@ const styles = StyleSheet.create({
     paddingBottom: 4,
   },
   primaryButtonStyle: {
-    backgroundColor: '#b44346',
+    backgroundColor: '#8BBABB',
     paddingLeft: 24,
     paddingRight: 24,
   },
@@ -62,7 +66,7 @@ const styles = StyleSheet.create({
   },
 
   secondaryButtonStyle: {
-    backgroundColor: '#d88e6c',
+    backgroundColor: '#C7F0DB',
   },
   secondaryButtonTextStyle: {
     color: 'black',
@@ -72,11 +76,11 @@ const styles = StyleSheet.create({
     paddingBottom: 4,
   },
   logostyle: {
-    height: 50,
-    width: 55,
+    height: 80,
+    width: 85,
   },
   imageView: {
-    marginTop: 10,
+    marginTop: 190,
     flexDirection: 'row',
     justifyContent: 'center',
   },
@@ -111,9 +115,6 @@ export const DisplayModal = ({visibility, setVisibility, buttons}) => (
       <View style={styles.modalContainer}>
         <View style={styles.imageView}>
           <Image style={styles.logostyle} source={logo} />
-        </View>
-        <View style={styles.texViewStyle}>
-          <Text style={styles.modalContainerTextStyle}>Custom Modal</Text>
         </View>
         <View style={[styles.innerContainer]}>
           {buttons.map(({text, onPress, isPrimary}) => (
