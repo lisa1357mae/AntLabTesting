@@ -23,8 +23,14 @@ const styles = StyleSheet.create({
 class Home extends React.Component {
   static navigationOptions = {
     title: 'Home',
+    headerStyle: {
+      backgroundColor: '#f0f1f3',
+    },
+    headerTintColor: 'black',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
   };
-
   render() {
     return (
       <View style={{ height: 50, width: 50 }}>

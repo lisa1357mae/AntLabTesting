@@ -14,6 +14,8 @@ const styles = StyleSheet.create({
   },
   nameViewStyle: {
     marginRight: 60,
+    paddingTop: 4,
+    paddingBottom: 4,
   },
   nameTextStyle: {
     fontSize: 28,
@@ -95,6 +97,13 @@ class Profile extends React.Component {
   };
   static navigationOptions = {
     title: 'Profile',
+    headerStyle: {
+      backgroundColor: '#f0f1f3',
+    },
+    headerTintColor: 'black',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
   };
 
   render() {
