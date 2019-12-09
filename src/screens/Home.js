@@ -19,6 +19,9 @@ const styles = StyleSheet.create({
     marginRight: 50,
     marginTop: 23,
   },
+  screenContainerStyle: {
+    backgroundColor: '#C7F0DB',
+  },
 });
 
 class Home extends React.Component {
@@ -34,17 +37,16 @@ class Home extends React.Component {
   };
   render() {
     return (
-      <ScreenContainer style={{ backgroundColor:'#C7F0DB' }}>
-      <View style={styles.containerStyle}>
-        <SmallCustomButton
-          textStyles={styles.homeButtonTextStyle}
-          buttonStyles={styles.homeButtonStyle}
-          onPress={() => this.props.navigation.navigate('Profile')}>
-          Next Screen
-        </SmallCustomButton>
-
-      </View>
-        </ScreenContainer>
+      <ScreenContainer style={styles.screenContainerStyle}>
+        <View style={styles.containerStyle}>
+          <SmallCustomButton
+            textStyles={styles.homeButtonTextStyle}
+            buttonStyles={styles.homeButtonStyle}
+            onPress={() => this.props.navigation.navigate('Profile')}>
+            Next Screen
+          </SmallCustomButton>
+        </View>
+      </ScreenContainer>
     );
   }
 }

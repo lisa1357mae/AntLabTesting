@@ -123,7 +123,6 @@ class Profile extends React.Component {
           <View style={nameViewStyle}>
             <Text style={nameTextStyle}>Settings</Text>
           </View>
-
           <View style={[container, modalBackgroundStyle]}>
             <Modal
               animationType="fade"

@@ -46,7 +46,6 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     marginBottom: 90,
   },
-
   buttonView: {
     paddingTop: 4,
     paddingBottom: 4,
@@ -64,7 +63,6 @@ const styles = StyleSheet.create({
     paddingBottom: 4,
     color: 'black',
   },
-
   secondaryButtonStyle: {
     backgroundColor: '#C7F0DB',
   },
