@@ -97,7 +97,7 @@ class Profile extends React.Component {
               onPress={() => {
                 this.setModalVisible(true);
               }}>
-              <Text style={customTextStyle}>Show Modal</Text>
+              <Text style={customTextStyle}>Open Modal</Text>
             </TouchableOpacity>
           </View>
         </View>

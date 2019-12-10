@@ -1,5 +1,6 @@
 import React from 'react';
-import {View, Modal, StyleSheet, Text, Image} from 'react-native';
+import {View, Modal, StyleSheet, Image, Text} from 'react-native';
+import {isSmallDevice} from '../common/Margins';
 import {SmallCustomButton} from '.';
 
 const styles = StyleSheet.create({
@@ -13,11 +14,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'flex-start',
   },
-
   modalContainer: {
     flex: 1,
     justifyContent: 'space-between',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: '#DEDEF0',
     marginTop: 100,
     marginBottom: 100,
   },
@@ -27,7 +27,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     flexDirection: 'row',
     justifyContent: 'center',
-  //  alignItems: 'center',
     marginTop: 25,
   },
   textViewStyle: {
@@ -46,42 +45,91 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     marginBottom: 90,
   },
-  buttonView: {
-    paddingTop: 4,
-    paddingBottom: 4,
-  },
+  buttonView: isSmallDevice()
+    ? {
+        paddingTop: 24,
+        paddingBottom: 24,
+      }
+    : {
+        paddingTop: 4,
+        paddingBottom: 4,
+      },
   primaryButtonStyle: {
-    backgroundColor: '#8BBABB',
+    backgroundColor: '#C7F0DB',
     paddingLeft: 24,
     paddingRight: 24,
   },
 
-  primaryButtonTextStyle: {
-    paddingRight: 50,
-    paddingLeft: 50,
-    paddingTop: 4,
-    paddingBottom: 4,
-    color: 'black',
-  },
+  primaryButtonTextStyle: isSmallDevice()
+    ? {
+        color: '#464159',
+        paddingRight: 48,
+        paddingLeft: 48,
+        paddingTop: 22,
+        paddingBottom: 42,
+      }
+    : {
+        paddingRight: 50,
+        paddingLeft: 50,
+        paddingTop: 4,
+        paddingBottom: 4,
+        color: '#464159',
+      },
   secondaryButtonStyle: {
-    backgroundColor: '#C7F0DB',
+    backgroundColor: '#8BBABB',
   },
-  secondaryButtonTextStyle: {
-    color: 'black',
-    paddingRight: 46,
-    paddingLeft: 46,
-    paddingTop: 4,
-    paddingBottom: 4,
-  },
-  logostyle: {
-    height: 80,
-    width: 85,
-  },
+  secondaryButtonTextStyle: isSmallDevice()
+    ? {
+        color: '#464159',
+        paddingRight: 42.5,
+        paddingLeft: 42.5,
+        paddingTop: 22,
+        paddingBottom: 42,
+      }
+    : {
+        color: '#464159',
+        paddingRight: 45.5,
+        paddingLeft: 45.5,
+        paddingTop: 4,
+        paddingBottom: 4,
+      },
+  logostyle: isSmallDevice()
+    ? {
+        height: 60,
+        width: 66,
+        bottom: 145,
+      }
+    : {
+        height: 80,
+        width: 86,
+      },
   imageView: {
-    marginTop: 190,
+    alignItems: 'center',
+    marginTop: 160,
     flexDirection: 'row',
     justifyContent: 'center',
   },
+  modalTextStyle: isSmallDevice()
+    ? {
+        flex: 1,
+        justifyContent: 'center',
+        flexDirection: 'row',
+        marginLeft: 100,
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: 'black',
+        marginTop: 12,
+      }
+    : {
+        flex: 1,
+        justifyContent: 'center',
+        flexDirection: 'row',
+        marginLeft: 142,
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: 'black',
+        marginTop: 42,
+      },
 });
 
 const logo = require('../../images/anthrowarelogo.png');
@@ -111,6 +159,7 @@ export const DisplayModal = ({visibility, setVisibility, buttons}) => (
       visible={visibility}
       onRequestClose={() => {}}>
       <View style={styles.modalContainer}>
+        <Text style={styles.modalTextStyle}>Custom Modal</Text>
         <View style={styles.imageView}>
           <Image style={styles.logostyle} source={logo} />
         </View>

@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     paddingBottom: 14,
   },
   homeButtonTextStyle: {
-    color: 'black',
+    color: '#C7F0DB',
     fontSize: 14,
   },
   containerStyle: {
