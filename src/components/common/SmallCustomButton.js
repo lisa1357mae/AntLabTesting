@@ -11,8 +11,8 @@ const styles = StyleSheet.create({
     paddingLeft: 14,
     paddingTop: 6,
     paddingBottom: 6,
-    backgroundColor: 'purple',
-    borderColor: 'purple',
+    backgroundColor: 'blue',
+    borderColor: 'blue',
   },
   textStyle: {
     color: 'white',
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     borderWidth: 2,
   },
   outlineTextStyle: {
-    color: 'purple',
+    color: 'black',
   },
 });
 

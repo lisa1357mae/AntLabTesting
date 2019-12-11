@@ -10,7 +10,6 @@ const styles = {
     fontSize: 18,
     lineHeight: 23,
     flex: 1,
-  //  textDecorationLine: 'underline',
   },
   labelStyle: {
     fontSize: 18,

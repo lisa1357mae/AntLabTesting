@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import {View, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -9,8 +9,12 @@ const styles = StyleSheet.create({
   },
 });
 
-const ScreenContainer = (props) => {
-  return <View {...props} style={[styles.container, props.style]}>{props.children}</View>;
+const ScreenContainer = props => {
+  return (
+    <View {...props} style={[styles.container, props.style]}>
+      {props.children}
+    </View>
+  );
 };
 
-export { ScreenContainer };
+export {ScreenContainer};
