@@ -19,7 +19,8 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   innerContainer: {
-    marginBottom: 44,
+    marginBottom: 34,
+    marginTop: 8,
   },
   buttonView: {
     paddingTop: 4,
@@ -59,6 +60,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'center',
+    marginBottom: 8,
+    marginTop: 8,
   },
   modalTextStyle: {
     paddingLeft: 2,
@@ -71,6 +74,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flexDirection: 'row',
     marginTop: 40,
+    marginBottom: 8,
   },
 });
 
