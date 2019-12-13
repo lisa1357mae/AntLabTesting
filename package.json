@@ -11,6 +11,8 @@
     "react": "16.8.6",
     "react-native": "0.60.5",
     "react-native-gesture-handler": "^1.1.0",
+    "react-native-quote-generator": "^0.1.3-rc3",
+    "react-native-swiper-deck": "^1.0.4-rc4",
     "react-navigation": "^3.7.1"
   },
   "devDependencies": {

@@ -5661,9 +5661,10 @@ react-native-gesture-handler@^1.1.0:
     invariant "^2.2.2"
     prop-types "^15.5.10"
 
-"react-native-quote-generator@file:../../react-native-quote-generator/react-native-quote-generator-v0.1.0-rc2.tgz":
-  version "0.1.0-rc2"
-  resolved "file:../../react-native-quote-generator/react-native-quote-generator-v0.1.0-rc2.tgz#a81d42f969ba4cc0bb008ebcc75792ee97113185"
+react-native-quote-generator@^0.1.3-rc3:
+  version "0.1.3-rc3"
+  resolved "https://registry.yarnpkg.com/react-native-quote-generator/-/react-native-quote-generator-0.1.3-rc3.tgz#73ae5ed3775081cd91f6032abc77ba7ef9e51427"
+  integrity sha512-A25cQ+tq9MJC6jf7HB6rEyzbO2giA9lk4/nqGTeagvF1t2Ev98kXkybLvuXJWyqoez6RglSwfqsGPjI5W65iJQ==
 
 react-native-safe-area-view@^0.14.1:
   version "0.14.6"
@@ -5679,9 +5680,10 @@ react-native-safe-area-view@^0.14.1:
   dependencies:
     debounce "^1.2.0"
 
-"react-native-swiper-deck@file:../../Anthroware/react-native-swiper-deck/react-native-swiper-deck-v1.0.2-rc4.tgz":
-  version "1.0.2-rc4"
-  resolved "file:../../Anthroware/react-native-swiper-deck/react-native-swiper-deck-v1.0.2-rc4.tgz#88f1c5af2eafb241104b78a487de53e92ae970af"
+react-native-swiper-deck@^1.0.4-rc4:
+  version "1.0.4-rc4"
+  resolved "https://registry.yarnpkg.com/react-native-swiper-deck/-/react-native-swiper-deck-1.0.4-rc4.tgz#0f052c8125f151b59bf40224f0bdfe539498a9c8"
+  integrity sha512-8h4Xn93ERf03NuMZYwURnPXbic8RPo/TGhG4ezKNVFfAmPdqaYX8L9jMoquM4QrHjI36k9FhiNAZFKLkdawjcQ==
 
 react-native-tab-view@^1.2.0, react-native-tab-view@^1.4.1:
   version "1.4.1"
