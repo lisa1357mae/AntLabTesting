@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import Quote from 'react-native-quote-generator';
 import Deck from 'react-native-swiper-deck';
 import {SmallCustomButton, ScreenContainer} from '../components/common';
@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
   deckView: {
     marginTop: 10,
     paddingBottom: 10,
+    justifyContent: 'center',
   },
   newImageStyle: {
     height: 175,
@@ -44,9 +45,9 @@ const styles = StyleSheet.create({
     color: 'transparent',
   },
   footerTextStyle: {
-    marginLeft: 115,
     fontWeight: 'bold',
     color: '#6C7B95',
+    justifyContent: 'center',
   },
 });
 
@@ -93,7 +94,6 @@ class Home extends React.Component {
             textStyle={styles.newtextStyle}
           />
         </View>
-        <Text style={styles.footerTextStyle}>Swipe me</Text>
       </ScreenContainer>
     );
   }
